@@ -1,0 +1,22 @@
+{
+  "name": "node-express-ajax",
+  "version": "1.0.0",
+  "description": "D52-node-express-ajax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvikster/D52-node-express-ajax.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvikster/D52-node-express-ajax/issues"
+  },
+  "homepage": "https://github.com/dvikster/D52-node-express-ajax#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

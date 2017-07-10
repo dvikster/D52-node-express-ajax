@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  //h1= title
+  //p Log In
+  //p
+  //  input(
+  //  type='text'
+  //  name='name'
+  //  )
+  //p
+  //  input(
+  //  type='password'
+  //  name='password'
+  //  )
+  //button(type='button' class='btn') login
+
+  h1.title-login Login
+
+  // register form
+  form#pug-form(method='POST' action='/registerpug' name='registerForm')
+    div.form-group
+      p
+        label(for='name') Name:
+        br
+        input#name.form-control(type='text', placeholder='first and last' name='userName')
+    div.form-group
+      p
+        label(for='email') Password:
+        br
+        input#email.form-control(type='password', placeholder='password' name='userPass')
+    button.btn.btn-primary(type='submit') Login

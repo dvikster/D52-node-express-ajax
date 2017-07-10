@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<h1>Введите данные</h1>
+<form id="static-form" action="/register" method="post" name="registerForm">
+    <label>Имя</label></br>
+    <input type="text" name="userName" /></br></br>
+    <label>Password</label></br>
+    <input type="password" name="userPass" /></br></br>
+    <input type="submit" value="Отправить" />
+</form>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+
+    $("form#static-form").submit(function(e) {
+
+        e.preventDefault();
+        var registerForm = document.forms["registerForm"];
+        var userName = registerForm.elements["userName"].value;
+        var userPass = registerForm.elements["userPass"].value;
+
+        $.ajax({
+            type: "POST",
+            url: "/userstatic",
+            data: JSON.stringify({userName: userName, userPass: userPass}),
+            dataType: "json",
+            contentType: "application/json",
+            success: function(data){
+                console.log(data);
+            },
+        });
+    });
+</script>
+</body>
+<html>
